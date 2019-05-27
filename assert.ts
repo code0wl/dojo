@@ -36,7 +36,7 @@ export default class Assert {
             return `::TEST ${test.toUpperCase()} PASSED::`
         }else{
             if(typeof expectation === 'object'){
-                return `::TEST ${test.toUpperCase()} FAILED:: EXPECTED ${JSON.stringify(expectation)} but got ${JSON.stringify(result)}`
+                return `::TEST ${test.toUpperCase()} FAILED:: EXPECTED ${JSON.stringify(result)} but got ${JSON.stringify(expectation)}`
             }else{
                 return `::TEST ${test.toUpperCase()} FAILED:: EXPECTED ${result} but got ${expectation}`
             }
